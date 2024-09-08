@@ -29,7 +29,7 @@ const navigations = [
 
 function Mobilesize() {
   return (
-    <div className='lg:hidden px-2 py-3 h-17 bg-neutral-400 fixed bottom-0 w-full flex justify-around'>
+    <div className='lg:hidden px-2 py-3 h-17 bg-black bg-opacity-100 fixed bottom-0 w-full flex justify-around'>
 
       {navigations.map((item, index) => (
         <NavLink 

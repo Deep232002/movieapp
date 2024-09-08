@@ -37,13 +37,13 @@ console.log(mediaType)
           {/* <div className="absolute top-0 w-full h-full hidden lg:flex items-center justify-between p-4 "> */}
           
             <button
-              className="flex items-center justify-center absolute top-0 bottom-0 my-auto mx-0 w-10 h-10 bg-white  p-1 text-xl text-black rounded-full "
+              className="flex items-center justify-center absolute top-0 bottom-0 my-auto mx-0 w-10 h-10 bg-white  p-1 text-xl text-black rounded-full hidden lg:flex"
               onClick={handleLeft}
             >
               <IoIosArrowBack />
             </button>
             <button
-              className="flex items-center justify-center absolute top-0 bottom-0 right-0 my-auto  w-10 h-10 bg-white  p-1 text-xl text-black rounded-full"
+              className="flex items-center justify-center absolute top-0 bottom-0 right-0 my-auto  w-10 h-10 bg-white  p-1 text-xl text-black rounded-full hidden lg:flex"
               onClick={handleRight}
             >
               <IoIosArrowForward />
