@@ -20,19 +20,11 @@ export default function Detailpage(){
   const [playVideo,setPlayVideo] = useState(false)
   const [playVideoId,setPlayVideoId] = useState("")
 
-//   console.log("data",data)
-  console.log("star cast",recommendationData)
-
   const handlePlayVideo = (data)=>{
     setPlayVideoId(data)
     setPlayVideo(true)
 
   }
-
-//   useEffect(()=>{
-//     Detailpage()
-//   },[location])
-
   const duration = (data?.runtime/60)?.toFixed(1)?.split(".")
   const writer = castData?.crew?.filter(el => el?.job === "Writer")?.map(el => el?.name)?.join(", ")
 
@@ -117,7 +109,7 @@ export default function Detailpage(){
                     {
                       castData?.cast?.filter(el => el?.profile_path).map((starCast,index)=>{
                         return(
-                          <div>
+                          <div key={index}>
                             <div>
                               <img
                                 src={imageURL+starCast?.profile_path} 
