@@ -1,4 +1,4 @@
-import Header from './component/section/header';
+import Header from './component/section/Header';
 import Footer from './component/section/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Movie from './component/pages/movie';
