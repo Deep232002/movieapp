@@ -21,7 +21,7 @@ export default function Detailpage(){
   const [playVideoId,setPlayVideoId] = useState("")
 
 //   console.log("data",data)
-  console.log("star cast",similarData)
+  console.log("star cast",recommendationData)
 
   const handlePlayVideo = (data)=>{
     setPlayVideoId(data)
@@ -136,8 +136,9 @@ export default function Detailpage(){
           </div>
 
           <div>
-              <CardScroll movieData={similarData} heading={"Similar "+params?.explore} media_type={params?.movie}/>
-              <CardScroll movieData={recommendationData} heading={"Recommendation "+params?.movie} media_type={params?.movie}/>
+              <CardScroll movieData={similarData} heading={"Similar "+params?.movie} mediaType={params?.movie}/>
+              {/* <CardScroll movieData={similarData} heading={params.movie?'Similar '+params.movie:'Similar movies'} mediaType={params.movie?params.movie:'movie'}/> */}
+              <CardScroll movieData={recommendationData} heading={"Recommendation "+params?.movie} mediaType={params?.movie}/>
           </div>
 
           {

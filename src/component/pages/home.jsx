@@ -13,12 +13,12 @@ export default function Home() {
 
 
  
-  
+  console.log(movieData)
  
   return (
     <div>
      <BannerHome/>
-     <CardScroll movieData={movieData} heading="Tranding" tranding={true} />
+     <CardScroll movieData={movieData} heading="Tranding" tranding={true} mediaType={movieData?.media_type}/>
      <CardScroll movieData={Nowplaying} heading="Now Playing" tranding={false} mediaType='movie'/>
      <CardScroll movieData={populer} heading="Populer Movies" tranding={false} mediaType='movie'/>
      <CardScroll movieData={TvSeries} heading="Populer TV Show" tranding={false} mediaType='tv'/>

@@ -13,7 +13,7 @@ export default function Card({ data, tranding, index, mediaType }) {
   }
 
   return (
-    <Link to={'/'+mediaType+'/'+data.id} className="w-full min-w-[230px] max-w-[280px] h-80 overflow-hidden rounded-md relative hover:scale-100 " onClick='_blank'>
+    <Link to={'/'+mediaType+'/'+data.id} className="w-full min-w-[230px] max-w-[280px] h-80 overflow-hidden rounded-md relative hover:scale-105 transition-all " onClick='_blank'>
       <div className="w-full h-full">
         <img
           src={ImageUrl + data.backdrop_path}

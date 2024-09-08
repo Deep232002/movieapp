@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-
+import { Link } from "react-router-dom";
 export default function BannerHome() {
   const movieData = useSelector((state) => state.moviedata.bannerData);
   const ImageUrl = useSelector((state) => state.moviedata.ImageUrl);
@@ -20,7 +20,7 @@ export default function BannerHome() {
       setBannerImage((preve) => preve - 1);
     }
   };
-  // console.loh()
+  // console.log(movieData)
 
   useEffect(()=>{
     const interval = setInterval(()=>{
@@ -74,14 +74,14 @@ export default function BannerHome() {
                   {data?.title || data?.name}
                 </h1>
                 <p className="text-ellipsis line-clamp-3 ">{data.overview}</p>
-                <div className="flex items-center gap-4 mt-2">
+                <div className="flex items-center gap-4 mt-2 mb-6">
                   <p>Rating : {Number(data.vote_average).toFixed(1)}</p>
                   <span>|</span>
                   <p>View : {Number(data.popularity).toFixed(0)}</p>
                 </div>
-                <button className="px-3 py-2 text-bold bg-white text-black mt-5 rounded hover:bg-gradient-to-l from-orange-500 to-red-700 transition-all hover:text-white hover:scale-105">
+                <Link to={'/'+data?.media_type+'/'+data?.id} className="px-3 py-2 text-bold bg-white text-black mt-5 rounded hover:bg-gradient-to-l from-orange-500 to-red-700 transition-all hover:text-white hover:scale-105">
                   Play Now
-                </button>
+                </Link>
               </div>
             </div>
 )})}
