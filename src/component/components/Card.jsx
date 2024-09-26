@@ -2,18 +2,20 @@ import React from "react";
 import { useSelector } from "react-redux";
 import moment from "moment";
 import { FaRegHeart } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Card({ data, tranding, index, mediaType }) {
   const ImageUrl = useSelector((state) => state.moviedata.ImageUrl);
   // console.log(data);
+
+  console.log(mediaType)
 
   if(!data.backdrop_path){
     return null
   }
 
   return (
-    <Link to={'/'+mediaType+'/'+data.id} className="w-full min-w-[230px] max-w-[280px] h-80 overflow-hidden rounded-md relative hover:scale-105 transition-all " onClick='_blank'>
+    <NavLink to={'/'+mediaType+'/'+data?.id} className="w-full min-w-[230px] max-w-[280px] h-80 overflow-hidden rounded-md relative hover:scale-105 transition-all ">
       <div className="w-full h-full">
         <img
           src={ImageUrl + data.backdrop_path}
@@ -39,6 +41,6 @@ export default function Card({ data, tranding, index, mediaType }) {
           <p className="flex gap-2 items-center">{Number(data.vote_average).toFixed(1)} <FaRegHeart/></p>
         </div>
       </div>
-    </Link>
+    </NavLink>
   );
 }

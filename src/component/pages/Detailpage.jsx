@@ -128,9 +128,9 @@ export default function Detailpage(){
           </div>
 
           <div>
-              <CardScroll movieData={similarData} heading={"Similar "+params?.movie} mediaType={params?.movie}/>
-              {/* <CardScroll movieData={similarData} heading={params.movie?'Similar '+params.movie:'Similar movies'} mediaType={params.movie?params.movie:'movie'}/> */}
-              <CardScroll movieData={recommendationData} heading={"Recommendation "+params?.movie} mediaType={params?.movie}/>
+              <CardScroll movieData={similarData} heading={"Similar "+params?.movie} mediaType={params?.movie} />
+             
+              <CardScroll movieData={recommendationData} heading={"Recommendation "+params?.movie} mediaType={params?.movie} />
           </div>
 
           {
